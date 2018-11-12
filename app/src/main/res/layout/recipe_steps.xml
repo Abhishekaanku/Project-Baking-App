@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/theme_blue"
+    android:layout_marginTop="4dp"
+    android:layout_marginBottom="4dp"
+    android:layout_marginRight="8dp"
+    android:layout_marginLeft="8dp"
+    android:id="@+id/recipeStepsLayout">
+
+    <ImageView
+        android:id="@+id/imageViewThumbnail"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:srcCompat="@drawable/ic_play_button"
+        tools:layout_editor_absoluteX="179dp"
+        tools:layout_editor_absoluteY="94dp"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/videoThumbnailDescription"/>
+
+    <TextView
+        android:id="@+id/textViewStepName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        tools:text="TextView"
+        tools:layout_editor_absoluteX="106dp"
+        tools:layout_editor_absoluteY="155dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/imageViewThumbnail"
+        app:layout_constraintTop_toTopOf="@id/imageViewThumbnail"
+        app:layout_constraintBottom_toBottomOf="@id/imageViewThumbnail"
+        android:scrollHorizontally="false"
+        android:gravity="center"
+        android:textAlignment="center"
+        style="@style/TextAppearance.AppCompat.Medium"
+        android:paddingRight="4dp"
+        android:paddingLeft="4dp"/>
+
+</android.support.constraint.ConstraintLayout>

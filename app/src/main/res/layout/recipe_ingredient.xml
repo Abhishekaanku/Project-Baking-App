@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/theme_blue"
+    android:layout_marginTop="4dp"
+    android:layout_marginBottom="4dp"
+    android:layout_marginRight="8dp"
+    android:layout_marginLeft="8dp"
+    android:id="@+id/recipeIngredientsLayout">
+    <TextView
+        android:id="@+id/textViewIngredientTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ingredientTitle"
+        tools:layout_editor_absoluteX="126dp"
+        tools:layout_editor_absoluteY="192dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textAlignment="center"
+        android:gravity="center"
+        style="@style/TextAppearance.AppCompat.Medium"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"/>
+
+    <ImageView
+        android:id="@+id/imageViewExpandCollapse"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:srcCompat="@drawable/ic_if_ic_expand_more"
+        tools:layout_editor_absoluteX="163dp"
+        tools:layout_editor_absoluteY="218dp"
+        app:layout_constraintTop_toBottomOf="@id/listRecipeIngredientView"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:contentDescription="@string/ingredientListButton"/>
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:id="@+id/listRecipeIngredientView"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/textViewIngredientTitle"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:background="@color/backgroundBlue"/>
+</android.support.constraint.ConstraintLayout>

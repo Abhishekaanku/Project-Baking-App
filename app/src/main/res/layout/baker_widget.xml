@@ -1,0 +1,40 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textViewWidgetTitle"
+        style="@style/TextAppearance.AppCompat.Medium"
+        android:fontFamily="sans-serif"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        android:scrollHorizontally="false"
+        android:layout_gravity="center"
+        android:textColor="@android:color/white"
+        android:background="@color/touchBlue"
+        android:text="@string/recipeWidgetLoadMessage"/>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:id="@+id/listViewrecipeIngredient"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/emptyWidgetErrorMessageView"
+        style="@style/TextAppearance.AppCompat.Medium"
+        android:layout_gravity="center"
+        android:drawableTop="@drawable/interneterror"
+        android:drawablePadding="8dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="16dp"
+        android:text="@string/NetworkError"
+        android:visibility="gone"/>
+</LinearLayout>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <ListPreference
+        android:title="@string/prefSortName"
+        android:key="@string/prefSortkey"
+        android:entries="@array/prefRecipeSortTitles"
+        android:entryValues="@array/prefRecipeSortValues"
+        android:defaultValue="@string/prefRecipeNoSortValue"/>
+    <ListPreference
+        android:title="@string/prefCardColorName"
+        android:key="@string/prefCrdColorKey"
+        android:entries="@array/prefCardColorTitles"
+        android:entryValues="@array/prefCardColorValues"
+        android:defaultValue="@string/prefCardBlueValue"/>
+
+</PreferenceScreen>

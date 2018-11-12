@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="4dp"
+    android:layout_marginBottom="4dp"
+    android:layout_marginRight="8dp"
+    android:layout_marginLeft="8dp"
+    android:id="@+id/recipeIngredientItemLayout">
+
+    <TextView
+        android:id="@+id/textViewIngredientName"
+        tools:text="TextView"
+        tools:layout_editor_absoluteX="107dp"
+        tools:layout_editor_absoluteY="150dp"
+        style="@style/ingredientStyle"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewIngredientMeasure"
+        tools:text="TextView"
+        tools:layout_editor_absoluteX="136dp"
+        tools:layout_editor_absoluteY="291dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewIngredientName"
+        style="@style/ingredientMeasureStyle" />
+
+</android.support.constraint.ConstraintLayout>

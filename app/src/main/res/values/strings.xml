@@ -1,0 +1,95 @@
+<resources>
+    <string name="app_name">Baker Shop</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="NetworkError">Using the app for first time requires Internet Conenction.</string>
+    <string name="ViewPreference">View Preference File</string>
+    <string name="recipeJson">Recipe Json File</string>
+
+    <string name="prefRecipeAscValue">Ascending</string>
+    <string name="prefRecipeDescValue">Descending</string>
+    <string name="prefRecipeAscTitle">Ascending</string>
+    <string name="prefRecipeDescTitle">Descending</string>
+    <string name="prefRecipeNoSortValue">No Sorting</string>
+    <string name="prefRecipeNoSortTitle">No Sorting</string>
+
+    <string-array name="prefRecipeSortValues">
+        <item>@string/prefRecipeAscValue</item>
+        <item>@string/prefRecipeDescValue</item>
+        <item>@string/prefRecipeNoSortValue</item>
+    </string-array>
+
+    <string-array name="prefRecipeSortTitles">
+        <item>@string/prefRecipeAscTitle</item>
+        <item>@string/prefRecipeDescTitle</item>
+        <item>@string/prefRecipeNoSortTitle</item>
+    </string-array>
+
+    <string name="prefCardBlueValue">Blue</string>
+    <string name="prefCardGreenValue">Green</string>
+    <string name="prefCardRedValue">Red</string>
+
+    <string name="prefCardBlueTitle">Blue</string>
+    <string name="prefCardGreenTitle">Green</string>
+    <string name="prefCardRedTitle">Red</string>
+
+    <string-array name="prefCardColorValues">
+        <item>@string/prefCardBlueValue</item>
+        <item>@string/prefCardGreenValue</item>
+        <item>@string/prefCardRedValue</item>
+    </string-array>
+
+    <string-array name="prefCardColorTitles">
+        <item>@string/prefCardBlueTitle</item>
+        <item>@string/prefCardGreenTitle</item>
+        <item>@string/prefCardRedTitle</item>
+    </string-array>
+
+    <string name="prefSortName">Sort Recipe By Views</string>
+    <string name="prefSortkey">Sort By</string>
+
+    <string name="prefCardColorName">Card Color</string>
+    <string name="prefCrdColorKey">Card Color</string>
+
+    <string name="nextButton">NEXT</string>
+    <string name="prevButton">PREVIOUS</string>
+
+    <string name="DetailStepLabel"><u>Procedure</u></string>
+
+    <string name="settingLabel">Settings</string>
+    <string name="appwidget_text">EXAMPLE</string>
+    <string name="add_widget">Recipe Nsme</string>
+
+    <string name="AddRecipeToWidget">Display In Widget</string>
+
+    <string name="WidgetRecipeKey">Widget Recipe Key</string>
+
+    <string name="ingredientListDisplayParam">ingredientListDisplayParam</string>
+
+    <plurals name="unitMeasure">
+        <item quantity="one">Unit</item>
+        <item quantity="other">Units</item>
+    </plurals>
+    <plurals name="cupMeasure">
+        <item quantity="one">Cup</item>
+        <item quantity="other">Cups</item>
+    </plurals>
+    <plurals name="TBLSPMeasure">
+        <item quantity="one">Table Spoon</item>
+        <item quantity="other">Table Spoons</item>
+    </plurals>
+    <plurals name="TSPMeasure">
+        <item quantity="one">Tea Spoon</item>
+        <item quantity="other">Tea Spoons</item>
+    </plurals>
+    <string name="gramMeasure">Gram</string>
+    <string name="KgMeasure">Kg</string>
+    <string name="ounceMeasure">ounce</string>
+    <string name="recipeImageDescription">Recipe Image</string>
+    <string name="videoThumbnailDescription">Video Thumbnail</string>
+    <string name="ingredientListButton">Expand or Collapse Ingredient List</string>
+    <string name="ingredientTitle">Ingredients</string>
+    <string name="recipeWidgetLoadMessage">Please wait while we load your favourite recipe!</string>
+
+</resources>

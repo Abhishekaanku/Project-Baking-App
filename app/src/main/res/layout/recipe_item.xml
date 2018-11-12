@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/theme_blue"
+    android:layout_marginTop="4dp"
+    android:layout_marginBottom="4dp"
+    android:layout_marginRight="8dp"
+    android:layout_marginLeft="8dp"
+    android:id="@+id/recipeItemLayout">
+
+
+    <ImageView
+        android:id="@+id/imageViewRecipeItem"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        app:srcCompat="@drawable/default_recipe"
+        tools:layout_editor_absoluteX="99dp"
+        tools:layout_editor_absoluteY="59dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/recipeImageDescription"/>
+
+    <TextView
+        android:id="@+id/textViewRecipeName"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        tools:text="TextView"
+        tools:layout_editor_absoluteX="158dp"
+        tools:layout_editor_absoluteY="124dp"
+        app:layout_constraintTop_toTopOf="@id/imageViewRecipeItem"
+        app:layout_constraintBottom_toTopOf="@id/textViewViewed"
+        app:layout_constraintLeft_toRightOf="@id/imageViewRecipeItem"
+        app:layout_constraintRight_toRightOf="parent"
+        android:gravity="center"
+        android:textAlignment="center"
+        style="@style/TextAppearance.AppCompat.Large"/>
+
+    <TextView
+        android:id="@+id/textViewViewed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Views: "
+        tools:layout_editor_absoluteX="127dp"
+        tools:layout_editor_absoluteY="113dp"
+        app:layout_constraintLeft_toRightOf="@id/imageViewRecipeItem"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/imageViewRecipeItem"
+        style="@style/TextAppearance.AppCompat.Medium"
+        android:layout_marginBottom="2dp"/>
+
+</android.support.constraint.ConstraintLayout>

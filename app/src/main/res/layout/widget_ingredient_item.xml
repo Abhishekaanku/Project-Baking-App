@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/backgroundBlue">
+
+    <TextView
+        android:id="@+id/textViewIngredientName1"
+        tools:text="TextView"
+        style="@style/ingredientStyle"
+        android:scrollHorizontally="false"
+        android:textColor="@android:color/black"/>
+    <TextView
+        android:id="@+id/textViewIngredientMeasure1"
+        tools:text="TextView"
+        style="@style/ingredientMeasureStyle"
+        android:textColor="@android:color/black"/>
+</LinearLayout>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="cardRed">#F44336</color>
+    <color name="touchRed">#B71C1C</color>
+    <color name="backgroundRed">#FFCDD2</color>
+
+    <color name="cardBlue">@android:color/holo_blue_light</color>
+    <color name="touchBlue">#1A237E</color>
+    <color name="backgroundBlue">#C5CAE9</color>
+
+    <color name="cardGreen">#4CAF50</color>
+    <color name="touchGreen">#1B5E20</color>
+    <color name="backgroundGreen">#C8E6C9</color>
+</resources>
