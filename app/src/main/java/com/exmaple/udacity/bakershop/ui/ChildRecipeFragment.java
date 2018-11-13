@@ -11,7 +11,6 @@ import android.support.v4.app.Fragment;
 import android.support.v4.media.session.MediaButtonReceiver;
 import android.support.v4.media.session.MediaSessionCompat;
 import android.support.v4.media.session.PlaybackStateCompat;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -24,7 +23,6 @@ import com.exmaple.udacity.bakershop.RecipeViewModel;
 import com.exmaple.udacity.bakershop.pojo.Procedure;
 import com.exmaple.udacity.bakershop.R;
 import com.exmaple.udacity.bakershop.pojo.Recipe;
-import com.exmaple.udacity.bakershop.service.UtilIntentService;
 import com.exmaple.udacity.bakershop.util.RecipeUtils;
 import com.google.android.exoplayer2.DefaultLoadControl;
 import com.google.android.exoplayer2.ExoPlaybackException;
@@ -150,6 +148,10 @@ public class ChildRecipeFragment extends Fragment implements ExoPlayer.EventList
         }
         if(getContext().getResources().getBoolean(R.bool.isRotated)) {
             exoPlayerView.setMinimumHeight(RecipeUtils.getScreenHeight(getContext()));
+        }
+        else if(getContext().getResources().getBoolean(R.bool.isTablet)) {
+            int minheight=(int)(0.5*RecipeUtils.getScreenHeight(getContext()));
+            exoPlayerView.setMinimumHeight(minheight);
         }
         return view;
     }
