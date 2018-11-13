@@ -293,8 +293,6 @@ public class ChildRecipeFragment extends Fragment implements ExoPlayer.EventList
 
     @Override
     public void onDestroy() {
-        mediaSession.setActive(false);
-        releasePLayer();
         super.onDestroy();
     }
 
@@ -342,9 +340,8 @@ public class ChildRecipeFragment extends Fragment implements ExoPlayer.EventList
 
     @Override
     public void onStop() {
-        if(exoPlayer!=null) {
-            exoPlayer.setPlayWhenReady(false);
-        }
+        mediaSession.setActive(false);
+        releasePLayer();
         super.onStop();
     }
 
