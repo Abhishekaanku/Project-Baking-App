@@ -8,8 +8,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
 import android.widget.LinearLayout;
 import com.exmaple.udacity.bakershop.R;
 import com.exmaple.udacity.bakershop.service.BakerWidgetIntentService;
@@ -20,7 +18,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class RecipeActivity extends AppCompatActivity implements RecipeMasterViewAdapter.RecipeDataClickListener,
-        ChildRecipeFragment.OnFragmentInteractionListener, View.OnClickListener,
+        ChildRecipeFragment.OnFragmentInteractionListener,
         SharedPreferences.OnSharedPreferenceChangeListener {
     public final static String RECIPE_ID_EXTRA = "recipe_id";
     private final static int ID_DEFAULT = -1;
@@ -35,14 +33,6 @@ public class RecipeActivity extends AppCompatActivity implements RecipeMasterVie
     @BindView(R.id.recipeDetailTabletView)
     LinearLayout recipeDetailTabletView;
 
-    @Nullable
-    @BindView(R.id.buttonNextRecipeStep)
-    Button nextButton;
-
-    @Nullable
-    @BindView(R.id.buttonPrevRecipeStep)
-    Button prevButton;
-
     ChildRecipeFragment childRecipeFragment=null;
     int stepId=STEP_DEFAULT;
 
@@ -52,10 +42,6 @@ public class RecipeActivity extends AppCompatActivity implements RecipeMasterVie
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recipe);
         ButterKnife.bind(this);
-        if(nextButton!=null) {
-            nextButton.setOnClickListener(this);
-            prevButton.setOnClickListener(this);
-        }
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         Intent intent = getIntent();
         if (intent.hasExtra(RECIPE_ID_EXTRA) && intent.hasExtra(MainActivity.RECIPE_NAME)) {
@@ -147,27 +133,6 @@ public class RecipeActivity extends AppCompatActivity implements RecipeMasterVie
         return RecipeUtils.onIsNetworkConnected(this);
     }
 
-    @Override
-    public void onClick(View view) {
-        int id=view.getId();
-        if(id==R.id.buttonNextRecipeStep) {
-            stepId+=1;
-            childRecipeFragment=ChildRecipeFragment.newInstance(recipeID,stepId);
-            getSupportFragmentManager().beginTransaction()
-                    .replace(R.id.childFragmentView,childRecipeFragment,TAG)
-                    .commit();
-        }
-        else if(id==R.id.buttonPrevRecipeStep) {
-            if(stepId-1>=0) {
-                stepId-=1;
-                childRecipeFragment=ChildRecipeFragment.newInstance(recipeID,stepId);
-                getSupportFragmentManager().beginTransaction()
-                        .replace(R.id.childFragmentView,childRecipeFragment,TAG)
-                        .commit();
-            }
-        }
-    }
-
 
     @Override
     public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {
@@ -176,19 +141,12 @@ public class RecipeActivity extends AppCompatActivity implements RecipeMasterVie
                 String color=sharedPreferences.getString(key,getString(R.string.prefCardBlueValue));
                 if(color.equals(getString(R.string.prefCardBlueValue))) {
                     recipeDetailTabletView.setBackgroundResource(R.drawable.blue_background);
-                    nextButton.setBackgroundResource(R.drawable.theme_blue);
-                    prevButton.setBackgroundResource(R.drawable.theme_blue);
                 }
                 else if(color.equals(getString(R.string.prefCardRedValue))) {
                     recipeDetailTabletView.setBackgroundResource(R.drawable.red_background);
-                    nextButton.setBackgroundResource(R.drawable.theme_red);
-                    prevButton.setBackgroundResource(R.drawable.theme_red);
-
                 }
                 else  {
                    recipeDetailTabletView.setBackgroundResource(R.drawable.green_background);
-                    nextButton.setBackgroundResource(R.drawable.theme_green);
-                    prevButton.setBackgroundResource(R.drawable.theme_green);
                 }
             }
         }
