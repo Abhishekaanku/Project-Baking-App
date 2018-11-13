@@ -60,9 +60,11 @@ public class RecipeMasterViewAdapter extends RecyclerView.Adapter<RecipeMasterVi
         if(getItemViewType(position)==0) {
             if(PrefUtils.getIngrdientListParam(mContext)) {
                 holder.ingredientListView.setVisibility(View.VISIBLE);
+                holder.imageviewExapndCollapse.setImageResource(R.drawable.ic_if_ic_expand_less);
             }
             else {
                 holder.ingredientListView.setVisibility(View.GONE);
+                holder.imageviewExapndCollapse.setImageResource(R.drawable.ic_if_ic_expand_more);
             }
             holder.imageviewExapndCollapse.setOnClickListener(new View.OnClickListener() {
                 @Override
